@@ -1,0 +1,142 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>BlackJack - Works by Min Kim</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo">Works by Min Kim</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li class="active"><a href="index.html">Portfolio</a></li>
+							<li><a href="generic.html">Contact Info</a></li>
+							<li><a href="elements.html">Resume</a></li>
+						</ul>
+						<ul class="icons">
+							<li><a href="https://www.linkedin.com/in/jungmin-kim-b25992152/" class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
+							<li><a href="https://github.com/jk4449" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<section class="post">
+								<header class="major">
+									<span class="date">May 2, 2023</span>
+									<h1><a href="PDF/black_jack_report.pdf">Project BlackJack</a></h1>
+									<h3>Summary of the System</h3>
+									<p>The system is a 1-player Blackjack game that uses the user's hand gesture as the input. Once the user starts the game, they are asked to make a hand pose for “double down” and “split”, which will be saved in the system. Then, the game begins. Game play of blackjack is shown via computer screen, and every time the user has to make a decision, and the camera will turn on and the system will recognize the user’s decision, and continue the game depending on that input.</p>
+								</header>
+								<div class="image main"><img src="images/pic01.jpg" alt="" /></div>
+								<h2>Overview</h2>
+								<h3>Gestures that the Interface Recognize</h3>
+								<ul>
+									<li>Dynamic Gesture</li>
+									<ul>
+										<li>Hit: Double tap (recognized by the vertical movement of the hand)</li>
+										<li>Stand: hand waves horizontally twice over the table. (recognized by the horizontal movement of the hand)</li>
+									</ul>
+									<li>Static Gesture</li>
+									<ul>
+										<li>Double Down: make number 1 with the finger, and place it in the table. (recognized by the hand pose and lack of movement of the hand)</li>
+										<li>Split: make a V shape with fingers by separating index finger and middle finger, and place it in the table. (recognized by the hand pose and lack of movement of the hand)</li>
+									</ul>
+								</ul>
+								<h3>Domain Engineering</h3>
+								<p>The system works in most settings where there is sufficient light, background is stationary, and the color of the table and the background is not too similar to the user’s skin color. One way to ensure that the system works well is to turn off the lights in the room, block natural lights, and only have one light source (ex. lamp) that shines the light at the user’s hand. User can also check if the system is working well. When first starting the system, it will show the binary image that is processed by the computer, and the user can adjust the background and lights to make sure that the binary image shows and tracks the hand clearly before starting the game play.</p>
+								<h3>Packages Used</h3>
+								<p>I used OpenCV package to access the computer’s camera, detect skin, draw contour, compare the contour to check if the real-time hand matches the key pose, etc. I used numpy package to handle the blackjack display. Specifically, I used numpy.concatenate as I had to stack images of cards on top of each other. I used random package to shuffle the deck in the blackjack game, and the time package to delay actions in blackjack game to allow the users to follow the game in a speed that they would be used to in the real-life game.</p>
+							
+								<h2>Method & Thresholds: Static Gestures</h2>
+								<h3>Double Down Recognition Function</h3>
+								<h3>Split Recognition Function</h3>
+								
+								<h2>Method & Thresholds: Dynamic Gestures</h2>
+							</section>
+
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<section>
+							<form method="post" action="#">
+								<div class="fields">
+									<div class="field">
+										<label for="name">Name</label>
+										<input type="text" name="name" id="name" />
+									</div>
+									<div class="field">
+										<label for="email">Email</label>
+										<input type="text" name="email" id="email" />
+									</div>
+									<div class="field">
+										<label for="message">Message</label>
+										<textarea name="message" id="message" rows="3"></textarea>
+									</div>
+								</div>
+								<ul class="actions">
+									<li><input type="submit" value="Send Message" /></li>
+								</ul>
+							</form>
+						</section>
+						<section class="split contact">
+							<section class="alt">
+								<h3>Address</h3>
+								<p>70 Morningside Dr.<br />
+								New York, NY 10025</p>
+							</section>
+							<section>
+								<h3>Phone</h3>
+								<p>(212) 390-0314</p>
+							</section>
+							<section>
+								<h3>Email</h3>
+								<p>jk4449@columbia.edu</p>
+							</section>
+							<section>
+								<h3>Social</h3>
+								<ul class="icons alt">
+									<li><a href="https://www.linkedin.com/in/jungmin-kim-b25992152/" class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
+									<li><a href="https://github.com/jk4449" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+								</ul>
+							</section>
+						</section>
+					</footer>
+
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
