@@ -26,8 +26,7 @@
 					<nav id="nav">
 						<ul class="links">
 							<li class="active"><a href="index.html">Portfolio</a></li>
-							<li><a href="generic.html">Contact Info</a></li>
-							<li><a href="elements.html">Resume</a></li>
+							<li><a href="PDF/resume.pdf">Resume</a></li>
 						</ul>
 						<ul class="icons">
 							<li><a href="https://www.linkedin.com/in/jungmin-kim-b25992152/" class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
@@ -41,15 +40,50 @@
 						<!-- Post -->
 							<section class="post">
 								<header class="major">
-									<span class="date">April 25, 2017</span>
+									<span class="date">May 9, 2023</span>
 									<h1>Hunt & Harvest: VR Game</h1>
-									<p>Aenean ornare velit lacus varius enim ullamcorper proin aliquam<br />
-									facilisis ante sed etiam magna interdum congue. Lorem ipsum dolor<br />
-									amet nullam sed etiam veroeros.</p>
+									<p>Hunt & Harvest is a VR game where the player hunts animals and collects vegetables. The user’s goal is to collect the animals or vegetables specified in the quota, in their exact types and amounts. In order to do this, the player must approach the targets using the necessary travel and wayfinding techniques (e.g. minimap) and subsequently capture the targets using the provided selection and manipulation techniques (e.g. tranquilizer, knife, basket). These techniques are further discussed below.</p>
 								</header>
-								<div class="image main"><img src="images/pic01.jpg" alt="" /></div>
-								<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fergiat. Pellentesque in mi eu massa lacinia malesuada et a elit. Donec urna ex, lacinia in purus ac, pretium pulvinar mauris. Nunc lorem mauris, fringilla in aliquam at, euismod in lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Curabitur sapien risus, commodo eget turpis at, elementum convallis enim turpis, lorem ipsum dolor sit amet nullam.</p>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam tristique libero eu nibh porttitor fermentum. Nullam venenatis erat id vehicula viverra. Nunc ultrices eros ut ultricies condimentum. Mauris risus lacus, blandit sit amet venenatis non, bibendum vitae dolor. Nunc lorem mauris, fringilla in aliquam at, euismod in lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In non lorem sit amet elit placerat maximus. Pellentesque aliquam maximus risus. Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum.</p>
+								
+								<div style="text-align: center"><iframe width="700" height="400" src="https://www.youtube.com/embed/t90y-bdw6mM" title="Hunt&amp;Harvest Demo by JEMM Studios" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+								<p>I developed the functions for tool-switching, tranquilizing, and triggering the minimap and instruction using the wrist angle ("looking at watch" motion). I also assisted in resolving merge conflicts and managing global variables.</p>
+								<h3>Tool Switching</h3>
+								<p>The player can switch between tools using the ‘A’ button. Once the ‘A’ button is
+									pressed, mini examples of available tools will appear next to the player’s controller.
+									Still pressing the mini examples, the player can hover over the desired tool and let go
+									of the button to select that tool. When the player is hovering over a tool, the tool will
+									turn red to indicate that it is ready to be selected. If the player is not hovering over
+									the tool, it will remain its original color. Once the ‘A’ button is released, the mini
+									examples will disappear. If the ‘A’ button is released and the player is not hovering
+									over any examples, the player will continue to hold whatever tool they had before.</p>
+								<h3>Tranquilizer</h3>
+								<p>In the meat-lover mode, players can choose to use the tool, Tranquilizer. Players can shoot the animals 
+									from a distance using the tranquilizer, approach the tranquilized
+									animal, and put it into the basket to collect it. The tranquilizer has a maximum
+									distance it can shoot from, and a crosshair target will be displayed on the
+									animal when the player is in a shootable range from the animal. </p>
+								<img width="300" src="images/hunt.jpg" alt="" />
+								<h3>Triggering Minimap and Instructions</h3>
+								<p>The player can load the minimap by displaying it on their left wrist with
+									specific wrist motion.  The player can fold their left and/or right arm, so that the controller is
+									perpendicular to the headset direction in birds eye view, to toggle minimap
+									and/or instruction respectively. Once the item is toggled it should be
+									displayed on top of the player’s wrist. The player can remove the items from
+									their view by unfolding their arm so that the controller and headset direction
+									aligns. This means that the item will stay on the player’s wrist once spawned,
+									as long as the player’s wrist angle is less than the aligned angle. Below is a
+									diagram that shows the mechanism for left hand, and right hand would be the
+									same but flipped horizontally
+
+									With the minimap on the player’s wrist, the player can flexibly adjust the size
+									of the wrist minimap by scaling it. The player can scale it by grabbing the
+									minimap with two hands and moving the right hand outwards for expanding or
+									inwards for shrinking. Once the minimap is scaled, it will stay scaled.</p>
+									<iframe width="400" height="300" src="https://www.youtube.com/embed/qK0acYgZlb4" title="scale" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+								<img height="300" src="images/angle_description.jpg" alt="" />
+
+								<p>For full documentation, click the button below.</p>
+								<a href="PDF/JEMM Final Description.pdf" class="button primary">Full Documentation</a>
 							</section>
 
 					</div>

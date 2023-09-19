@@ -26,8 +26,7 @@
 					<nav id="nav">
 						<ul class="links">
 							<li class="active"><a href="index.html">Portfolio</a></li>
-							<li><a href="generic.html">Contact Info</a></li>
-							<li><a href="elements.html">Resume</a></li>
+							<li><a href="PDF/resume.pdf">Resume</a></li>
 						</ul>
 						<ul class="icons">
 							<li><a href="https://www.linkedin.com/in/jungmin-kim-b25992152/" class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
@@ -42,11 +41,11 @@
 							<section class="post">
 								<header class="major">
 									<span class="date">May 2, 2023</span>
-									<h1><a href="PDF/black_jack_report.pdf">Project BlackJack</a></h1>
+									<h1>Project BlackJack</h1>
 									<h3>Summary of the System</h3>
 									<p>The system is a 1-player Blackjack game that uses the user's hand gesture as the input. Once the user starts the game, they are asked to make a hand pose for “double down” and “split”, which will be saved in the system. Then, the game begins. Game play of blackjack is shown via computer screen, and every time the user has to make a decision, and the camera will turn on and the system will recognize the user’s decision, and continue the game depending on that input.</p>
 								</header>
-								<div class="image main"><img src="images/pic01.jpg" alt="" /></div>
+								<div class="image main"><img src="images/blackjack.jpg" alt="" /></div>
 								<h2>Overview</h2>
 								<h3>Gestures that the Interface Recognize</h3>
 								<ul>
@@ -65,12 +64,9 @@
 								<p>The system works in most settings where there is sufficient light, background is stationary, and the color of the table and the background is not too similar to the user’s skin color. One way to ensure that the system works well is to turn off the lights in the room, block natural lights, and only have one light source (ex. lamp) that shines the light at the user’s hand. User can also check if the system is working well. When first starting the system, it will show the binary image that is processed by the computer, and the user can adjust the background and lights to make sure that the binary image shows and tracks the hand clearly before starting the game play.</p>
 								<h3>Packages Used</h3>
 								<p>I used OpenCV package to access the computer’s camera, detect skin, draw contour, compare the contour to check if the real-time hand matches the key pose, etc. I used numpy package to handle the blackjack display. Specifically, I used numpy.concatenate as I had to stack images of cards on top of each other. I used random package to shuffle the deck in the blackjack game, and the time package to delay actions in blackjack game to allow the users to follow the game in a speed that they would be used to in the real-life game.</p>
-							
-								<h2>Method & Thresholds: Static Gestures</h2>
-								<h3>Double Down Recognition Function</h3>
-								<h3>Split Recognition Function</h3>
 								
-								<h2>Method & Thresholds: Dynamic Gestures</h2>
+								<p>For full documentation, click the button below.</p>
+								<a href="PDF/black_jack_report.pdf" class="button primary">Full Documentation</a>
 							</section>
 
 					</div>
